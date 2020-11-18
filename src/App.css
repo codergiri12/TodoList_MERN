@@ -1,38 +1,118 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Ovo&display=swap');
+
+body{
+  background-color:#EEEEEE;
+}
+.todolist{
+  background-color:#FFF;
+  padding:20px 20px 10px 20px;
+  margin-top:30px;
+}
+/*# --------heading of todo list--------- */
+.top_heading-wrapper {
   text-align: center;
+  margin-bottom: 20px;
+}
+span.Heading_todo {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: 'Acme', sans-serif;
+  letter-spacing: 2px;
+}
+span.todo_image {
+  margin-left: 7px;
+  font-size: 20px;
+}
+/* #----------------editing checkbox in todo list-------------------- */
+.form-check-input[type=checkbox] {
+  border-radius: .25em;
+  margin-right: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* #------------------editing the input field--------------- */
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #8bbafe;
+  outline: 0;
+  box-shadow: 0 0 0 0.09rem rgba(13,110,253,.25);
+}
+.btn-check:focus+.btn-outline-success, .btn-outline-success:focus {
+  box-shadow: 0 0 0 0.09rem rgba(25,135,84,.5);
+}
+/* # ----------------editing text near checkbox--------------- */
+span.text_to_do {
+  font-family: 'Mulish', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+}
+.form-check-input:focus {
+  border-color: #8bbafe;
+  outline: 0;
+  box-shadow: 0 0 0 0.09rem rgba(13,110,253,.25);
+}
+li.ui-state-default {
+  background: #fff;
+  border: none;
+  margin-bottom: 10px;
+  position: relative;
+}
+/* #------------close button right to text------------- */
+.close {
+  box-sizing: content-box;
+  width: 1.4em;
+  margin-right: auto;
+  color: #000;
+  height: 20px;
+  background-clip: content-box;
+  margin-left: auto;
+  position: absolute;
+  right: 0px;
+  top: -4%;
+  color: red;
+  border: none;
+  padding: 0px 0px 0px 0px;
+  background-color: white;
+}
+.close i:hover{
+  opacity: 0.6;
+}
+i.fa.fa-trash {
+  font-size: 1.2rem;
+}
+button.close:focus {
+  border: none;
+  outline: none;
+}
+.form-control{
+  border-radius:0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li.ui-state-default:last-child{
+  border-bottom:none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo-footer{
+  background-color:#F4FCE8;
+  margin:0 -20px -10px -20px;
+  padding: 10px 20px;
 }
-
-.App-link {
-  color: #61dafb;
+#done-items li{
+  padding:10px 0;
+  border-bottom:1px solid #ddd;
+  text-decoration:line-through;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+#done-items li:last-child{
+  border-bottom:none;
+}
+#checkAll{
+  margin-top:10px;
+}
+@media screen and (min-width:992px){
+  .container{
+    width: 50%;
   }
 }
